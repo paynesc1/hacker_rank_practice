@@ -42,3 +42,20 @@ def diagonalDifference(n):
     return None
 
 print(diagonalDifference(3))
+
+
+#ACTUAL CODE SUBMISSION TO HACKER RANK
+
+# def diagonalDifference(arr):
+#     # Write your code here
+#     n = int(len(arr))
+#     if len(arr) > 0:
+#         sum1 = 0
+#         sum2 = 0
+#         for i in range(n):
+#             sum1 += arr[i][i]
+#             sum2 += arr[i][n -1 -i]
+#         return abs(sum1 - sum2)
+#     return None
+
+#DONE
