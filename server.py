@@ -54,31 +54,46 @@ import random
 
 
 
-#BREAKING THE RECORDS
-def breaking_records(scores):
-    new_scores = [random.randint(0, 10**8) for _ in range(scores)]
-    print(new_scores)
-    #keep track of current minimum score
-    min = new_scores[0]
-    #keep track of current maximum score
-    max = new_scores[0]
-    #keep track number of times minimum was beat
-    count_min = 0
-    #keep track number of times maximum was beat
-    count_max = 0
-    if scores > 1000:
-        return ("Error")
-    for score in new_scores:
-        if score <= 0 and score > 10^8:
-            return("Error")
-        elif score > max:
-            max = score
-            count_max += 1
-        else:
-            if score < min:
-                min = score
-                count_min += 1
-    return [count_max, count_min]
+# #BREAKING THE RECORDS
+# def breaking_records(scores):
+#     new_scores = [random.randint(0, 10**8) for _ in range(scores)]
+#     print(new_scores)
+#     #keep track of current minimum score
+#     min = new_scores[0]
+#     #keep track of current maximum score
+#     max = new_scores[0]
+#     #keep track number of times minimum was beat
+#     count_min = 0
+#     #keep track number of times maximum was beat
+#     count_max = 0
+#     if scores > 1000:
+#         return ("Error")
+#     for score in new_scores:
+#         if score <= 0 and score > 10^8:
+#             return("Error")
+#         elif score > max:
+#             max = score
+#             count_max += 1
+#         else:
+#             if score < min:
+#                 min = score
+#                 count_min += 1
+#     return [count_max, count_min]
         
 
-print(breaking_records(5))
+# print(breaking_records(5))
+
+def cat_and_mouse(x, y, z):
+    #given positions of CatA, CatB, and Mouse
+    #find absolute position between both cats nad mouse to determine which is closer
+    #of the same, Mouse escapes
+    cat_a_position = abs(x - z)
+    cat_b_position = abs(y -z)
+    if cat_a_position < cat_b_position:
+        return ("Cat A")
+    elif cat_b_position < cat_a_position:
+        return ("Cat B")
+    else:
+        return ("Mouse C")
+
+print(cat_and_mouse(2,5,4))
