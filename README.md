@@ -10,3 +10,6 @@ Here, are some examples of my code, using Gist:
 3. Breaking the Records Problem [here](https://gist.github.com/paynesc1/8c47e06b3e418f37af983e03026014df)
 
 ### practice.py file
+This is a file I updated with many array algorithms. So this will be an array practice file.
+
+1. Classic FizzBuzz Problem [here](https://gist.github.com/paynesc1/c298eb9bb3d6f1e851601020c494d115)
