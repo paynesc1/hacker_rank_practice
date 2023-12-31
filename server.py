@@ -83,17 +83,46 @@ import random
 
 # print(breaking_records(5))
 
-def cat_and_mouse(x, y, z):
-    #given positions of CatA, CatB, and Mouse
-    #find absolute position between both cats nad mouse to determine which is closer
-    #of the same, Mouse escapes
-    cat_a_position = abs(x - z)
-    cat_b_position = abs(y -z)
-    if cat_a_position < cat_b_position:
-        return ("Cat A")
-    elif cat_b_position < cat_a_position:
-        return ("Cat B")
-    else:
-        return ("Mouse C")
+# def cat_and_mouse(x, y, z):
+#     #given positions of CatA, CatB, and Mouse
+#     #find absolute position between both cats nad mouse to determine which is closer
+#     #of the same, Mouse escapes
+#     cat_a_position = abs(x - z)
+#     cat_b_position = abs(y -z)
+#     if cat_a_position < cat_b_position:
+#         return ("Cat A")
+#     elif cat_b_position < cat_a_position:
+#         return ("Cat B")
+#     else:
+#         return ("Mouse C")
 
-print(cat_and_mouse(2,5,4))
+# print(cat_and_mouse(2,5,4))
+
+# def hurdle_race(n, k):
+#     # n = number of hurdles
+#     # k = max height character can jump
+#     # n comes in, make n number of hurdles that are between 1-100 in value
+#     hurdles = [random.randint(1, 100) for _ in range(n)]
+#     max_height = hurdles[0]
+#     # find max height
+#     for hurdle in hurdles:
+#         if hurdle > max_height:
+#             max_height = hurdle   
+#     # subtract k from max height to find number of potions needed
+#     potions = max_height - k
+#     if potions <= 0:
+#         return 0
+#     else:
+#         return potions
+
+# print(hurdle_race(5,7))
+
+def hurdle_race(n, k):
+    hurdles = [random.randint(1, 100) for _ in range(n)]
+    max_height = max(hurdles) 
+    potions = max_height - k
+    if potions <= 0:
+        return 0
+    else:
+        return potions
+print(hurdle_race(5,7))
