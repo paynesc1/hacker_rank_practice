@@ -117,12 +117,31 @@ import random
 
 # print(hurdle_race(5,7))
 
-def hurdle_race(n, k):
-    hurdles = [random.randint(1, 100) for _ in range(n)]
-    max_height = max(hurdles) 
-    potions = max_height - k
-    if potions <= 0:
-        return 0
+# def hurdle_race(n, k):
+#     hurdles = [random.randint(1, 100) for _ in range(n)]
+#     max_height = max(hurdles) 
+#     potions = max_height - k
+#     if potions <= 0:
+#         return 0
+#     else:
+#         return potions
+# print(hurdle_race(5,7))
+
+
+#BON APPETIT PROBLEM
+def bon_appetit(bill, k, b):
+    # bill is [array], k is item Anna declines, b is
+    # find the total of the bill split both ways
+    total_bill = 0
+    for item in bill:
+        total_bill += item
+    # find total of bill minus k
+    anna_total = (total_bill - bill[k])/2
+    # if  ^ total is equal to b, print Bon Appetit, else print money owed.
+    print(total_bill)
+    print(anna_total)
+    if anna_total == b:
+        print("Bon Appetit")
     else:
-        return potions
-print(hurdle_race(5,7))
+        print(int(b-anna_total))
+print(bon_appetit([3,10,2,9], 1, 7))
