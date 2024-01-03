@@ -120,7 +120,7 @@ import random
 # def hurdle_race(n, k):
 #     hurdles = [random.randint(1, 100) for _ in range(n)]
 #     max_height = max(hurdles) 
-#     potions = max_height - k
+#     potions = max_height - kl
 #     if potions <= 0:
 #         return 0
 #     else:
@@ -129,19 +129,63 @@ import random
 
 
 #BON APPETIT PROBLEM
-def bon_appetit(bill, k, b):
-    # bill is [array], k is item Anna declines, b is
-    # find the total of the bill split both ways
-    total_bill = 0
-    for item in bill:
-        total_bill += item
-    # find total of bill minus k
-    anna_total = (total_bill - bill[k])/2
-    # if  ^ total is equal to b, print Bon Appetit, else print money owed.
-    print(total_bill)
-    print(anna_total)
-    if anna_total == b:
-        print("Bon Appetit")
+# def bon_appetit(bill, k, b):
+#     # bill is [array], k is item Anna declines, b is
+#     # find the total of the bill split both ways
+#     total_bill = 0
+#     for item in bill:
+#         total_bill += item
+#     # find total of bill minus k
+#     anna_total = (total_bill - bill[k])/2
+#     # if  ^ total is equal to b, print Bon Appetit, else print money owed.
+#     print(total_bill)
+#     print(anna_total)
+#     if anna_total == b:
+#         print("Bon Appetit")
+#     else:
+#         print(int(b-anna_total))
+# print(bon_appetit([3,10,2,9], 1, 7))
+
+
+#REGEX PRACTICE
+# import re
+# f = open('regex_sum.txt')
+# # f = open('regex_sum_42.txt')
+# # f = open('regex.txt')
+# all_num = []
+# for line in f:
+#     line = line.rstrip()
+#     numbers = re.findall('[0-9]+', line)
+#     if len(numbers) <= 0:
+#         continue
+#     num = [int(i) for i in numbers]
+#     print(num)
+#     all_num.extend(num)
+# print(sum(all_num))
+
+
+#VIRAL ADVERTISING PROBLEM
+def viral_advertising(days):
+    # Keep a recipient's count
+    recipients = 5
+    total_likes = 0
+    if days < 1 or days > 50:
+        return "Error"
     else:
-        print(int(b-anna_total))
-print(bon_appetit([3,10,2,9], 1, 7))
+        # Calculate how many people like the advertisement
+        # Day one = 5/2 = 2 * 3
+        # Day two = 6/2 = 3 *3
+        # Day three = 9/2 = 4 * 3
+        # Day four = 12/2
+        for i in range(days):
+            likes = recipients // 2
+            total_likes += likes
+            recipients = likes * 3
+        return total_likes
+print(viral_advertising(4))
+
+
+
+
+    
+
