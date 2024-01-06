@@ -165,27 +165,38 @@ import random
 
 
 #VIRAL ADVERTISING PROBLEM
-def viral_advertising(days):
-    # Keep a recipient's count
-    recipients = 5
-    total_likes = 0
-    if days < 1 or days > 50:
-        return "Error"
-    else:
-        # Calculate how many people like the advertisement
-        # Day one = 5/2 = 2 * 3
-        # Day two = 6/2 = 3 *3
-        # Day three = 9/2 = 4 * 3
-        # Day four = 12/2
-        for i in range(days):
-            likes = recipients // 2
-            total_likes += likes
-            recipients = likes * 3
-        return total_likes
-print(viral_advertising(4))
+# def viral_advertising(days):
+#     # Keep a recipient's count
+#     recipients = 5
+#     total_likes = 0
+#     if days < 1 or days > 50:
+#         return "Error"
+#     else:
+#         # Calculate how many people like the advertisement
+#         # Day one = 5/2 = 2 * 3
+#         # Day two = 6/2 = 3 *3
+#         # Day three = 9/2 = 4 * 3
+#         # Day four = 12/2
+#         for i in range(days):
+#             likes = recipients // 2
+#             total_likes += likes
+#             recipients = likes * 3
+#         return total_likes
+# print(viral_advertising(4))
 
-
-
+def pdf_viewer(h, string):
+    # find highest letter height and multiply by # of letters
+    # map the list of heights to the alphabet
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    height_map = {alpha[i]: h[i] for i in range(26)}
+    # test that mapping is working
+    # for letter in string:
+    #     print(height_map[letter])
+    # find the largest height and multiply by length of string
+    max_height = max(height_map[letter] for letter in string)
+    # return that number
+    return (max_height*len(string))
+print(pdf_viewer([1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5], "abc"))
 
     
 
