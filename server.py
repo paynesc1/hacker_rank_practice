@@ -184,19 +184,69 @@ import random
 #         return total_likes
 # print(viral_advertising(4))
 
-def pdf_viewer(h, string):
-    # find highest letter height and multiply by # of letters
-    # map the list of heights to the alphabet
-    alpha = 'abcdefghijklmnopqrstuvwxyz'
-    height_map = {alpha[i]: h[i] for i in range(26)}
-    # test that mapping is working
-    # for letter in string:
-    #     print(height_map[letter])
-    # find the largest height and multiply by length of string
-    max_height = max(height_map[letter] for letter in string)
-    # return that number
-    return (max_height*len(string))
-print(pdf_viewer([1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5], "abc"))
+#PDF VIEWER PROBLEM
+# def pdf_viewer(h, string):
+#     # find highest letter height and multiply by # of letters
+#     # map the list of heights to the alphabet
+#     alpha = 'abcdefghijklmnopqrstuvwxyz'
+#     height_map = {alpha[i]: h[i] for i in range(26)}
+#     # test that mapping is working
+#     # for letter in string:
+#     #     print(height_map[letter])
+#     # find the largest height and multiply by length of string
+#     max_height = max(height_map[letter] for letter in string)
+#     # return that number
+#     return (max_height*len(string))
+# print(pdf_viewer([1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5], "abc"))
+
+
+
+#FIND DIGITS PROBLEM
+import random
+
+# def find_digits(t,nums):
+#     # determine if each digit is divisible by number
+#     # nums is a list of numbers
+#     print(nums)
+#     total_count = 0
+#     for num in nums:
+#         count = 0
+#         # convert each num to a string
+#         num_str = str(num)
+#         #for digit in number if divisible by num count + 1
+#         for digit in num_str:
+#             if digit != '0' and num % int(digit) == 0:
+#                 count += 1
+#         total_count += count
+#     return (f"Total # of times digits are divisible by nums is: {total_count}")
+
+# t = random.randint(1,15)
+# nums = [random.randint(0, 10**9) for _ in range(t)]
+# print(find_digits(t,nums))
+
+# def find_digits(num):
+#     # determine if every digit in num is divisible by num
+#     # num = int
+#     # convert to string
+#     num = str(num)
+#     count = 0
+#     for n in num:
+#         if int(num) % int(n) == 0 and n != '0':
+#             count += 1
+#     return count
+# print(find_digits(111))
+
+
+def findDigits(num):
+    # Write your code here
+    num = str(num)
+    count = 0
+    for n in num:
+        if n != '0' and int(num) % int(n) == 0:
+            count += 1
+    print(count)
+print(findDigits(2))
+
 
     
 
