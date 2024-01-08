@@ -128,7 +128,7 @@ import random
 # print(hurdle_race(5,7))
 
 
-#BON APPETIT PROBLEM
+# BON APPETIT PROBLEM
 # def bon_appetit(bill, k, b):
 #     # bill is [array], k is item Anna declines, b is
 #     # find the total of the bill split both ways
@@ -236,16 +236,32 @@ import random
 #     return count
 # print(find_digits(111))
 
+# def findDigits(num):
+#     # Write your code here
+#     num = str(num)
+#     count = 0
+#     for n in num:
+#         if n != '0' and int(num) % int(n) == 0:
+#             count += 1
+#     print(count)
+# print(findDigits(2))
 
-def findDigits(num):
-    # Write your code here
-    num = str(num)
-    count = 0
-    for n in num:
-        if n != '0' and int(num) % int(n) == 0:
-            count += 1
-    print(count)
-print(findDigits(2))
+
+def utopian_tree(n):
+    # n = # of cycles
+    height = 1
+    # iterate through n
+    for i in range(n):
+        # print(i)
+        # if number is divisible by 2 increase height by height*2
+        if i % 2 == 0:
+            height = height *2
+        # if number is divisible by 4 increase height by 1
+        if i % 3 == 0:
+            height += 1
+    return height
+
+print(utopian_tree(5))
 
 
     
