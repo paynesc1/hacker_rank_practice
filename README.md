@@ -1,5 +1,5 @@
 # Hacker Rank Practice
-### My code for Hacker Rank practice problems
+### My code for Hacker Rank practice problems:
 
 ### server.py file
 This is the main file I update. Everyday I try and do one Hacker Rank problem within an hour and push it to this server.py file.
