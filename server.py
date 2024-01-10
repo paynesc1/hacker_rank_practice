@@ -247,22 +247,41 @@ import random
 # print(findDigits(2))
 
 
-def utopian_tree(n):
-    # n = # of cycles
-    height = 1
-    # iterate through n
-    for i in range(n):
-        # print(i)
-        # if number is divisible by 2 increase height by height*2
-        if i % 2 == 0:
-            height = height *2
-        # if number is divisible by 4 increase height by 1
-        if i % 3 == 0:
-            height += 1
-    return height
+# def utopian_tree(n):
+#     # n = # of cycles
+#     height = 1
+#     # iterate through n
+#     for i in range(n):
+#         # print(i)
+#         # if number is divisible by 2 increase height by height*2
+#         if i % 2 == 0:
+#             height = height *2
+#         # if number is divisible by 4 increase height by 1
+#         else:
+#             height += 1
+#     return height
 
-print(utopian_tree(5))
+# print(utopian_tree(5))
 
 
-    
+# FACTORIAL PROBLEM
+# def extraLongFactorials(n):
+#     total = 1
+#     # decrement n until it reaches zero
+#     for i in range(1,n + 1):
+#         print(i)
+#         total = total * i
+#     print(total)
+
+# print(extraLongFactorials(30))
+
+def extraLongFactorials(n):
+    total = 1
+    # decrement n until it reaches zero
+    while n > 0:
+        total = total * n
+        n -= 1
+    return total
+
+print(extraLongFactorials(30))
 
