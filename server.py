@@ -275,13 +275,33 @@ import random
 
 # print(extraLongFactorials(30))
 
-def extraLongFactorials(n):
-    total = 1
-    # decrement n until it reaches zero
-    while n > 0:
-        total = total * n
-        n -= 1
-    return total
+# def extraLongFactorials(n):
+#     total = 1
+#     # decrement n until it reaches zero
+#     while n > 0:
+#         total = total * n
+#         n -= 1
+#     return total
 
-print(extraLongFactorials(30))
+# print(extraLongFactorials(30))
+
+
+#ANGRY PROFESSOR PROBLEM
+def angryProfessor(k,a):
+    late_count = 0
+    # for value in k if value, less than or equal to 0, add to latecount
+    for i in a:
+        # if late count less than k, print YES
+        if i <= 0:
+            late_count+=1
+        else:
+            continue
+    # otherwise print NO
+    print(late_count)
+    if late_count >= k:
+        print("NO")
+    else:
+        print("YES")
+
+print(angryProfessor(2, [0,-1,2,1]))
 
