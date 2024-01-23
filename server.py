@@ -287,21 +287,35 @@ import random
 
 
 #ANGRY PROFESSOR PROBLEM
-def angryProfessor(k,a):
-    late_count = 0
-    # for value in k if value, less than or equal to 0, add to latecount
-    for i in a:
-        # if late count less than k, print YES
-        if i <= 0:
-            late_count+=1
-        else:
-            continue
-    # otherwise print NO
-    print(late_count)
-    if late_count >= k:
-        print("NO")
-    else:
-        print("YES")
+# def angryProfessor(k,a):
+#     late_count = 0
+#     # for value in k if value, less than or equal to 0, add to latecount
+#     for i in a:
+#         # if late count less than k, print YES
+#         if i <= 0:
+#             late_count+=1
+#         else:
+#             continue
+#     # otherwise print NO
+#     if late_count >= k:
+#         print("NO")
+#     else:
+#         print("YES")
 
-print(angryProfessor(2, [0,-1,2,1]))
+# print(angryProfessor(2, [0,-1,2,1]))
 
+def sum_pairs(arr, k):
+    # keep a count of possible pairs
+    count = 0
+    n = len(arr)
+    # iterate through the array
+    for i in range(n):
+        for j in range(i + 1, n):
+            if (arr[i] + arr[j]) % k == 0:
+                count += 1
+    return count
+    # find pairs that when added together are divisible by n AND where i < j
+
+print(sum_pairs([1,3,2,6,1,2], 3))
+
+# given an array of integers and 1 positive integer, determine # of pairs where
