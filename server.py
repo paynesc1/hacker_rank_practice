@@ -304,18 +304,32 @@ import random
 
 # print(angryProfessor(2, [0,-1,2,1]))
 
-def sum_pairs(arr, k):
-    # keep a count of possible pairs
-    count = 0
-    n = len(arr)
-    # iterate through the array
-    for i in range(n):
-        for j in range(i + 1, n):
-            if (arr[i] + arr[j]) % k == 0:
-                count += 1
-    return count
-    # find pairs that when added together are divisible by n AND where i < j
 
-print(sum_pairs([1,3,2,6,1,2], 3))
+# # DIVISIBLE SUM PAIRS PROBLEM
+# def sum_pairs(arr, k):
+#     # keep a count of possible pairs
+#     count = 0
+#     n = len(arr)
+#     # iterate through the array
+#     for i in range(n):
+#         for j in range(i + 1, n):
+#             if (arr[i] + arr[j]) % k == 0:
+#                 count += 1
+#     return count
+#     # find pairs that when added together are divisible by n AND where i < j
 
-# given an array of integers and 1 positive integer, determine # of pairs where
+# print(sum_pairs([1,3,2,6,1,2], 3))
+
+# # given an array of integers and 1 positive integer, determine # of pairs where
+
+
+#LIST COMPREHENSIONS
+# 3 integers, x,y,z (dimensions) and n
+def list_c(x,y,z,n):
+    my_list = [x,y,z]
+    new_list = [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n]
+    # add combinations of x,y,z together and if they don't sum to x add all three as a list to a lsit
+    return new_list
+
+
+print(list_c(1,1,1,2))
