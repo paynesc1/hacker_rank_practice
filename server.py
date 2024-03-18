@@ -325,11 +325,17 @@ import random
 
 #LIST COMPREHENSIONS
 # 3 integers, x,y,z (dimensions) and n
-def list_c(x,y,z,n):
-    my_list = [x,y,z]
-    new_list = [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n]
-    # add combinations of x,y,z together and if they don't sum to x add all three as a list to a lsit
-    return new_list
+# def list_c(x,y,z,n):
+#     my_list = [x,y,z]
+#     new_list = [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n]
+#     # add combinations of x,y,z together and if they don't sum to x add all three as a list to a lsit
+#     return new_list
 
 
-print(list_c(1,1,1,2))
+# print(list_c(1,1,1,2))
+
+#ARRAYS
+def rotLeft(a, d):
+    # given an array a, shift d spaces to the left
+    print(a[d:] + a[:d])
+print(rotLeft([1,2,3,4,5], 3))
