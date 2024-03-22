@@ -334,8 +334,19 @@ import random
 
 # print(list_c(1,1,1,2))
 
-#ARRAYS
-def rotLeft(a, d):
-    # given an array a, shift d spaces to the left
-    print(a[d:] + a[:d])
-print(rotLeft([1,2,3,4,5], 3))
+
+# #ARRAYS
+# def rotLeft(a, d):
+#     # given an array a, shift d spaces to the left
+#     print(a[d:] + a[:d])
+# print(rotLeft([1,2,3,4,5], 3))
+
+def minimumBribes(q):
+    bribes = 0
+    # how many steps for number to get to current position
+    # if steps > 2, too chaotic
+    for current_position in range(len(q)-1, -1, -1):
+        print(current_position)
+        print(q[current_position])
+
+print(minimumBribes([1,5,2,3,4,6,7,8]))
