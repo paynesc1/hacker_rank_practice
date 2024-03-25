@@ -346,7 +346,17 @@ def minimumBribes(q):
     # how many steps for number to get to current position
     # if steps > 2, too chaotic
     for current_position in range(len(q)-1, -1, -1):
-        print(current_position)
-        print(q[current_position])
+        original_position = q[current_position] - 1
+        # print(f"Current Position: {current_position}")
+        # print(f"Original Position: {original_position}")
+        if original_position - current_position > 2:
+            print("Too chaotic")
+            return
+        for j in range(max(0, original_position - 2), current_position):
+            if q[j] > q[current_position]:
+                bribes += 1
+    print(bribes)
+
+
 
 print(minimumBribes([1,5,2,3,4,6,7,8]))
