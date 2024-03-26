@@ -343,14 +343,21 @@ import random
 
 
 # MINIMUM BRIBES PROBLEM
-def minimumBribes(q):
-    bribes = 0
-    for current_position in range(len(q)-1, -1, -1):
-        original_position = q[current_position] - 1
-        if original_position - current_position > 2:
-            return "Too chaotic"
-        for j in range(max(0, original_position - 2), current_position):
-            if q[j] > q[current_position]:
-                bribes += 1
-    return bribes
-print(minimumBribes([4,1,2,3]))
+# def minimumBribes(q):
+#     bribes = 0
+#     for current_position in range(len(q)-1, -1, -1):
+#         original_position = q[current_position] - 1
+#         if original_position - current_position > 2:
+#             return "Too chaotic"
+#         for j in range(max(0, original_position - 2), current_position):
+#             if q[j] > q[current_position]:
+#                 bribes += 1
+#     return bribes
+# print(minimumBribes([4,1,2,3]))
+
+
+#MINIMUM SWAPS PROBLEM
+def minimumSwaps(arr):
+    # code here
+    print(arr)
+print(minimumSwaps([1,2,3,4,5]))
