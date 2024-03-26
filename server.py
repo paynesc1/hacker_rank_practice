@@ -341,6 +341,8 @@ import random
 #     print(a[d:] + a[:d])
 # print(rotLeft([1,2,3,4,5], 3))
 
+
+# MINIMUM BRIBES PROBLEM
 def minimumBribes(q):
     bribes = 0
     for current_position in range(len(q)-1, -1, -1):
