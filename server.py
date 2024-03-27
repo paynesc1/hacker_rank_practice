@@ -358,6 +358,23 @@ import random
 
 #MINIMUM SWAPS PROBLEM
 def minimumSwaps(arr):
-    # code here
-    print(arr)
-print(minimumSwaps([1,2,3,4,5]))
+    """
+    given unordered array of integers w/out duplicates
+    sort array in ascending order (1,2,3,4,5...)
+    find minimum # of swaps to order array
+    """
+    swaps = 0
+    i = 0
+    # identify position and original position
+    # if the current position - the original position is not equal to zero, move it to original position
+    # add one to swaps
+    while i < len(arr):
+        original_position = arr[i]- 1
+        if arr[i] != arr[original_position]:
+            arr[i], arr[original_position] = arr[original_position], arr[i]
+            swaps += 1
+        else:
+            i += 1
+    return swaps
+
+print(minimumSwaps([4,3,1,2])) 
