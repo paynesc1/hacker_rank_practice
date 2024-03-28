@@ -379,8 +379,21 @@ import random
 
 # print(minimumSwaps([4,3,1,2])) 
 
-
+# RETRUN SECOND HIGHEST
 def array(arr):
-    unique_set = sorted(set(arr))
-    return unique_set[-2]
+    # METHOD ONE
+    # unique_set = sorted(set(arr))
+    # return unique_set[-2]
+
+    METHOD TWO
+    max = None
+    second_highest =  None
+    for i in arr:
+        if max is None or i > max:
+            max = i
+    for i in arr:
+        if i != max:
+            if second_highest is None or i > second_highest:
+                second_highest = i
+    return second_highest
 print(array([2,3,6,6,5]))
