@@ -380,20 +380,39 @@ import random
 # print(minimumSwaps([4,3,1,2])) 
 
 # RETRUN SECOND HIGHEST
-def array(arr):
-    # METHOD ONE
-    # unique_set = sorted(set(arr))
-    # return unique_set[-2]
+# def array(arr):
+#     # METHOD ONE
+#     # unique_set = sorted(set(arr))
+#     # return unique_set[-2]
 
-    METHOD TWO
-    max = None
-    second_highest =  None
-    for i in arr:
-        if max is None or i > max:
-            max = i
-    for i in arr:
-        if i != max:
-            if second_highest is None or i > second_highest:
-                second_highest = i
-    return second_highest
-print(array([2,3,6,6,5]))
+#     # METHOD TWO
+#     max = None
+#     second_highest =  None
+#     for i in arr:
+#         if max is None or i > max:
+#             max = i
+#     for i in arr:
+#         if i != max:
+#             if second_highest is None or i > second_highest:
+#                 second_highest = i
+#     return second_highest
+# print(array([2,3,6,6,5]))
+
+
+# given names and grades 
+# store in nested list
+# print names of students with second lowest grade
+# if many students with same grade sort alphabetically
+# print on new line
+def lowestGrade(my_list):
+    unique_grades = set()
+    for i in my_list:
+        unique_grades.add(i[1])
+    unique_grades_list = list(unique_grades)
+    unique_grades_list.sort()
+    second_lowest = unique_grades_list[1]
+    print(second_lowest)
+
+    
+
+print(lowestGrade([['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]))
